@@ -4,7 +4,7 @@ int main(){
 	int time;
 	printf("nhap von\n");
 	scanf("%f",&sum);
-	printf("nhap lai \n");
+	printf("nhap lai suat \n");
 	scanf("%f",&rate);
 	printf("nhap nam\n");
 	scanf("%d",&time);
