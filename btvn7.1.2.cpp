@@ -1,6 +1,7 @@
 #include<stdio.h>
 int main(){
 	int n;
+	printf("nhap n =\n");
 	scanf("%d",&n);
 	int a[n];
 	for(int i=0;i<n;i++){
@@ -8,20 +9,15 @@ int main(){
 		scanf("%d",&a[i]);
 	}
 	int x=0;
+	int y=0;
 	for(int i=0;i<n;i++){
-		if(a[i]>0){
+		if(a[i]%2!=0){
 			x=a[i];
-			break;
+			y=i;
 		}
-}
-for(int i=0;i<n;i++){
-	if(a[i]>0&&a[i]<x){
-		x=a[i];
 	}
-}
-if(x!=0){
-	printf("so duong nho nhat la %d",x);
-}
-	
+	if(x!=0){
+		printf("so le cuoi cung %d o vi tri %d \n",x,y+1);
+	}
 	return 0;
 }

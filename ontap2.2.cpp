@@ -8,10 +8,13 @@ int main(){
 	for(int i=1;i++;i<=n){
 		if(x>0){
 			s=s*x;
-			x=x-1;
-		}else{
+			x-=1;
+		}
+		else{
 			printf("giai thua: %d\n",s);break;
 		}
-	}
+		}
+	
 	return 0;
-}
+	}
+
