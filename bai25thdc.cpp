@@ -8,30 +8,33 @@ int main(){
 	int a[n][m];
 	for(int i=0;i<n;i++){
 		for(int j=0;j<m;j++){
-			cout<<"nhap a["<<i<<"]["<<j<<"]: ";
+			cout<<"nhap a("<<i+1<<","<<j+1<<"): ";
 			cin>>a[i][j];
+		}}
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			cout<<""<<a[i][j]<<"\t";
 		}
+		cout<<"\n";
 	}
 	int l,k;
-	int s=1;
 	int b[m];
-	cout<<"nhap l: ";cin>>l;
+    while(k<1||k>n){
 	cout<<"nhap k: ";cin>>k;
-	if(l<=k && k<n){
+   }
+	cout<<"nhap l: ";cin>>l;
+	if(l>=0&&l<n){
     	for(int j=0;j<m;j++){
     		
     			b[j]=a[l][j];
     			a[l][j]=a[k][j];
     			a[k][j]=b[j];
-			}
-	}
-    for(int j=0;j<m;j++){
-		cout<<"a["<<l<<"]["<<j<<"]:"<<a[l][j]<<"\t";
+			}}
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			cout<<""<<a[i][j]<<"\t";
 		}
 		cout<<"\n";
-	for(int j=0;j<m;j++){
-		cout<<"a["<<k<<"]["<<j<<"]:"<<a[k][j]<<"\t";	
-		}
-	
+	}
 	return 0;
 }
