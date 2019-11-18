@@ -17,24 +17,23 @@ int main(){
 		}
 		cout<<"\n";
 	}
-	int l,k;
+	int k,l;
 	int b[m];
     while(k<1||k>n){
 	cout<<"nhap k: ";cin>>k;
    }
-	cout<<"nhap l: ";cin>>l;
-	if(l>=0&&l<n){
+    while(l<1 || l>n){
+	cout<<"nhap l: ";cin>>l;}
     	for(int j=0;j<m;j++){
     		
-    			b[j]=a[l][j];
-    			a[l][j]=a[k][j];
-    			a[k][j]=b[j];
-			}}
+    			b[j]=a[l-1][j];
+    			a[l-1][j]=a[k-1][j];
+    			a[k-1][j]=b[j];
+			}
 	for(int i=0;i<n;i++){
 		for(int j=0;j<m;j++){
 			cout<<""<<a[i][j]<<"\t";
-		}
-		cout<<"\n";
+		}cout<<"\n";
 	}
 	return 0;
 }
